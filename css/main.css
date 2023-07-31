@@ -53,8 +53,6 @@ a:hover {
   margin-top: 10px;
   display: flex;
   justify-content: center;
-  animation: ease-in-out;
-  animation-duration: 2sec;
 }
 .img-rib {
   height: 65px;

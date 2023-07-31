@@ -1,31 +1,47 @@
-@import "https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap";
+/*
+0 - 600px:          Phone
+600px - 900px       Table Portrait
+900px - 1200px      Table Landscape
+[1200px - 1800px]   Desktop Normal Styles
+1800px +            Big Desktop
+1em = 16px
+ORDER: Base + Typography > Generar Layout + Grid > Page Layout > Components
+*/
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
 }
+
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
 }
+
 body {
   text-align: center;
   line-height: 1.5;
 }
+
 h1 {
   font-weight: 700;
 }
+
 p,
 a {
   font-size: 1.6rem;
 }
+
 a {
   text-decoration: none;
 }
+
 a:hover {
   transition: all 0.3s ease-in-out;
 }
+
 .section-title {
   margin-bottom: 4.5rem;
   font-size: 4rem;
@@ -37,34 +53,10 @@ a:hover {
   }
 }
 
-.section-title2 {
-  margin-top: 4rem;
-  margin-bottom: 2rem;
-  font-size: 4rem;
-  text-transform: uppercase;
-}
-@media (max-width: 37.5em) {
-  .section-title2 {
-    font-size: 2.8rem;
-  }
-}
-
-.ribbon {
-  margin-top: 10px;
-  display: flex;
-  justify-content: center;
-  animation: ease-in-out;
-  animation-duration: 2sec;
-}
-.img-rib {
-  height: 65px;
-  width: 65px;
-  margin: 10px;
-}
-
 .dark-blue-color {
   color: #272341;
 }
+
 .text-color-main {
   margin-left: 1rem;
   color: #5b86e5;
@@ -76,8 +68,8 @@ a:hover {
     background-image: linear-gradient(135deg, #36d1dc 0%, #5b86e5 100%);
     -webkit-background-clip: text;
     background-clip: text;
-    -webkit-text-fill-color: rgba(0, 0, 0, 0);
-    color: rgba(0, 0, 0, 0);
+    -webkit-text-fill-color: transparent;
+    color: transparent;
   }
 }
 @media (max-width: 37.5em) {
@@ -88,6 +80,8 @@ a:hover {
     box-shadow: none;
   }
 }
+
+/* Call to Action Button*/
 .cta-btn {
   display: inline-block;
   position: relative;
@@ -100,7 +94,7 @@ a:hover {
   transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.6s;
 }
 .cta-btn:hover {
-  box-shadow: 1.5px 1.5px 3px rgba(174, 174, 192, 0.4), -1px -1px 3px #fff;
+  box-shadow: 1.5px 1.5px 3px rgba(174, 174, 192, 0.4), -1px -1px 3px #ffffff;
 }
 @media (max-width: 37.5em) {
   .cta-btn:hover {
@@ -126,10 +120,12 @@ a:hover {
     background-image: none;
   }
 }
+
+/* Hero Style */
 .cta-btn--hero {
   color: #5b86e5;
   -webkit-text-fill-color: #5b86e5;
-  border: 2px solid rgba(0, 0, 0, 0);
+  border: 2px solid transparent;
   -o-border-image: linear-gradient(135deg, #36d1dc 0%, #5b86e5 100%);
   border-image: linear-gradient(135deg, #36d1dc 0%, #5b86e5 100%);
   border-image-slice: 1;
@@ -140,8 +136,8 @@ a:hover {
     background-image: linear-gradient(135deg, #36d1dc 0%, #5b86e5 100%);
     -webkit-background-clip: text;
     background-clip: text;
-    -webkit-text-fill-color: rgba(0, 0, 0, 0);
-    color: rgba(0, 0, 0, 0);
+    -webkit-text-fill-color: transparent;
+    color: transparent;
   }
 }
 @media screen and (-ms-high-contrast: active),
@@ -150,7 +146,7 @@ a:hover {
     color: #5b86e5;
   }
   .cta-btn--hero:hover {
-    color: #fff;
+    color: #ffffff;
   }
 }
 @media (max-width: 37.5em) {
@@ -167,7 +163,7 @@ a:hover {
   transform: translate(-98%, -25%) rotate(45deg);
 }
 .cta-btn--hero:hover {
-  -webkit-text-fill-color: #fff;
+  -webkit-text-fill-color: #ffffff;
   text-decoration: none;
 }
 @media (max-width: 37.5em) {
@@ -178,14 +174,15 @@ a:hover {
 .cta-btn--hero:hover::after {
   transform: translate(-9%, -25%) rotate(45deg);
 }
+
+/* Resume Style */
 .cta-btn--resume {
   border-radius: 0;
-  color: #fff;
-  border: 2px solid #fff;
-  margin-right: 10px;
+  color: #ffffff;
+  border: 2px solid #ffffff;
 }
 .cta-btn--resume::after {
-  background: #fff;
+  background: #ffffff;
 }
 .cta-btn--resume:hover {
   color: #5b86e5;
@@ -194,21 +191,23 @@ a:hover {
 }
 @media (max-width: 37.5em) {
   .cta-btn--resume:hover {
-    color: #fff;
+    color: #ffffff;
   }
 }
 .cta-btn--resume:hover::after {
   width: 100%;
 }
+
+/* Project Style*/
 .cta-btn--projects {
   box-shadow: inset 1px 1px 2px 2px rgba(174, 174, 192, 0.15),
     inset -2px -2px 2px rgba(255, 255, 255, 0.7);
-  border: 2px solid rgba(0, 0, 0, 0);
+  border: 2px solid transparent;
 }
 @media (max-width: 37.5em) {
   .cta-btn--projects {
     border: none;
-    box-shadow: 1.5px 1.5px 3px rgba(174, 174, 192, 0.4), -1px -1px 3px #fff;
+    box-shadow: 1.5px 1.5px 3px rgba(174, 174, 192, 0.4), -1px -1px 3px #ffffff;
   }
 }
 .cta-btn--projects::after {
@@ -219,13 +218,14 @@ a:hover {
   transform: translate(-98%, -30%) rotate(45deg);
 }
 .cta-btn--projects:hover {
-  box-shadow: 1.5px 1.5px 3px rgba(174, 174, 192, 0.4), -1px -1px 3px #fff;
+  box-shadow: 1.5px 1.5px 3px rgba(174, 174, 192, 0.4), -1px -1px 3px #ffffff;
 }
 .cta-btn--projects:hover::after {
   transform: translate(-12%, -30%) rotate(45deg);
 }
+
 .footer {
-  background-color: #333;
+  background-color: #333333;
   padding: 4.8rem 0;
 }
 .footer__text {
@@ -248,6 +248,7 @@ a:hover {
   width: 50%;
   border-top: 2px solid rgba(255, 255, 255, 0.1);
 }
+
 .social-links {
   display: flex;
   justify-content: center;
@@ -257,7 +258,7 @@ a:hover {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  color: #fff;
+  color: #ffffff;
   width: 5rem;
   height: 5rem;
   margin: 1.6rem 1.6rem;
@@ -281,14 +282,16 @@ a:hover {
 .social-links a:hover .fa-codepen {
   color: #212121;
 }
+
 .back-to-top i {
-  color: #fff;
+  color: #ffffff;
   margin: 1rem 0 1.6rem;
   transition: all 200ms ease;
 }
 .back-to-top i:hover {
   transform: translateY(-2px);
 }
+
 section {
   padding: 5rem 0rem;
 }
@@ -323,6 +326,7 @@ section .row p + p {
 section .row span {
   margin-top: 2rem;
 }
+
 .container {
   width: 100%;
   padding: 0 1.5rem;
@@ -354,10 +358,11 @@ section .row span {
     width: 100%;
   }
 }
+
 #about {
   background-color: #36d1dc;
   background-image: linear-gradient(135deg, #36d1dc 0%, #5b86e5 100%);
-  color: #fff;
+  color: #ffffff;
   height: 100%;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
   clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
@@ -412,6 +417,7 @@ section .row span {
     text-align: center;
   }
 }
+
 #contact {
   background-image: linear-gradient(135deg, #36d1dc 0%, #5b86e5 100%);
   -webkit-clip-path: polygon(0 15vh, 100% 0, 100% 100%, 0 100%);
@@ -419,7 +425,7 @@ section .row span {
   padding: 15rem 0 10rem 0;
   margin-top: -15rem;
   margin-bottom: -1px;
-  color: #fff;
+  color: #ffffff;
 }
 @media (max-width: 75em) {
   #contact {
@@ -432,7 +438,6 @@ section .row span {
 #contact .contact-wrapper {
   margin-top: 3.2rem;
   padding: 0 2rem;
-  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
 }
 #contact .contact-wrapper__text {
@@ -448,12 +453,13 @@ section .row span {
     font-size: 2rem;
   }
 }
+
 #hero {
   min-height: 100vh;
   height: 100vh;
   display: flex;
   align-items: center;
-  background: #fff;
+  background: #ffffff;
   font-weight: 400;
   color: #272341;
   padding: 0rem 5.6rem;
@@ -464,6 +470,9 @@ section .row span {
   z-index: -1;
   line-height: 1.2;
   animation: hidden 1000ms linear forwards;
+  /* background: url("/src/assets/[your-image].png");
+    background-position: center;
+    background-size: cover; */
 }
 @media (max-width: 56.25em) {
   #hero {
@@ -523,16 +532,18 @@ section .row span {
     font-size: 2rem;
   }
 }
+
 .scroll-down-link {
   position: absolute;
   left: 50%;
   bottom: 20px;
   transform: translateX(-50%);
 }
+
 .scroll-down {
   height: 50px;
   width: 30px;
-  border: 2px solid #000;
+  border: 2px solid #000000;
   border-radius: 50px;
   cursor: pointer;
 }
@@ -554,6 +565,7 @@ section .row span {
   top: 30%;
   animation-delay: 0.3s;
 }
+
 @keyframes hidden {
   0% {
     opacity: 0;
@@ -659,7 +671,8 @@ section .row span {
 }
 #projects .project-wrapper__image .thumbnail {
   border: none;
-  box-shadow: 8px 8px 9px 7px rgba(174, 174, 192, 0.4), -5px -5px 15px 7px #fff;
+  box-shadow: 8px 8px 9px 7px rgba(174, 174, 192, 0.4),
+    -5px -5px 15px 7px #ffffff;
 }
 #projects .project-wrapper__image .thumbnail .img-fluid {
   width: 100%;
@@ -674,4 +687,4 @@ section .row span {
     margin-bottom: 3.2rem;
     transform: none;
   }
-}
+} /*# sourceMappingURL=main.css.map */

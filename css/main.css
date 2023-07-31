@@ -57,7 +57,8 @@ a:hover {
 .img-rib {
   height: 65px;
   width: 65px;
-  margin: 10px;
+  margin-right: 10px;
+  margin-left: 10px;
 }
 
 .dark-blue-color {
@@ -71,7 +72,7 @@ a:hover {
 @supports ((-webkit-background-clip: text) or (background-clip: text)) or
   (-webkit-background-clip: text) {
   .text-color-main {
-    background-image: linear-gradient(135deg, #36d1dc 0%, #5b86e5 100%);
+    background-image: linear-gradient(135deg, #000428 0%, #004e92 100%);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: rgba(0, 0, 0, 0);
@@ -109,7 +110,7 @@ a:hover {
   content: "";
   display: block;
   position: absolute;
-  background-image: linear-gradient(135deg, #36d1dc 0%, #5b86e5 100%);
+  background-image: linear-gradient(135deg, #000428 0%, #004e92 100%);
   width: 0px;
   height: 100%;
   left: 0;
@@ -128,14 +129,14 @@ a:hover {
   color: #5b86e5;
   -webkit-text-fill-color: #5b86e5;
   border: 2px solid rgba(0, 0, 0, 0);
-  -o-border-image: linear-gradient(135deg, #36d1dc 0%, #5b86e5 100%);
-  border-image: linear-gradient(135deg, #36d1dc 0%, #5b86e5 100%);
+  -o-border-image: linear-gradient(135deg, #000428 0%, #004e92 100%);
+  border-image: linear-gradient(135deg, #000428 0%, #004e92 100%);
   border-image-slice: 1;
 }
 @supports ((-webkit-background-clip: text) or (background-clip: text)) or
   (-webkit-background-clip: text) {
   .cta-btn--hero {
-    background-image: linear-gradient(135deg, #36d1dc 0%, #5b86e5 100%);
+    background-image: linear-gradient(135deg, #000428 0%, #004e92 100%);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: rgba(0, 0, 0, 0);
@@ -224,7 +225,7 @@ a:hover {
 }
 .footer {
   background-color: #333;
-  padding: 4.8rem 0;
+  padding: 2rem 0;
 }
 .footer__text {
   font-size: 1.3rem;
@@ -354,7 +355,7 @@ section .row span {
 }
 #about {
   background-color: #36d1dc;
-  background-image: linear-gradient(135deg, #36d1dc 0%, #5b86e5 100%);
+  background-image: linear-gradient(135deg, #000428 0%, #004e92 100%);
   color: #fff;
   height: 100%;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
@@ -411,7 +412,7 @@ section .row span {
   }
 }
 #contact {
-  background-image: linear-gradient(135deg, #36d1dc 0%, #5b86e5 100%);
+  background-image: linear-gradient(135deg, #000428 0%, #004e92 100%);
   -webkit-clip-path: polygon(0 15vh, 100% 0, 100% 100%, 0 100%);
   clip-path: polygon(0 15vh, 100% 0, 100% 100%, 0 100%);
   padding: 15rem 0 10rem 0;

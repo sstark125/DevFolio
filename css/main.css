@@ -52,13 +52,21 @@ a:hover {
 .ribbon {
   margin-top: 10px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
 }
 .img-rib {
-  height: 65px;
-  width: 65px;
+  max-height: 65px;
+  max-width: 65px;
   margin-right: 10px;
   margin-left: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  /* Adjust the max-width as needed, this is just an example */
+  .img-rib {
+    max-width: 80px; /* Reduce the image size for smaller screens */
+  }
 }
 
 .dark-blue-color {
